@@ -5,6 +5,7 @@ import java.util.Comparator;
 
 import java.util.List;
 import java.util.stream.Stream;
+import ski.komoro.aoc.utils.Utils;
 
 public class Day02 extends AOCBase {
 
