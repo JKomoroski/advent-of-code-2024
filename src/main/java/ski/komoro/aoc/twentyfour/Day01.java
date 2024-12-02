@@ -1,3 +1,5 @@
+package ski.komoro.aoc.twentyfour;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.stream.Stream;
