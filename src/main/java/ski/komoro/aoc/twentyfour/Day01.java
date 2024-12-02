@@ -3,6 +3,7 @@ package ski.komoro.aoc.twentyfour;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.stream.Stream;
+import ski.komoro.aoc.utils.Tuple;
 
 public class Day01 extends AOCBase {
 
