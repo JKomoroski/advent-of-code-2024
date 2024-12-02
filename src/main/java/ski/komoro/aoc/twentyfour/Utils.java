@@ -1,3 +1,5 @@
+package ski.komoro.aoc.twentyfour;
+
 import java.util.Collection;
 import java.util.Comparator;
 

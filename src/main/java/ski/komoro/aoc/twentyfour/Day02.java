@@ -1,8 +1,9 @@
+package ski.komoro.aoc.twentyfour;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Day02 extends AOCBase {
