@@ -10,7 +10,7 @@ import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.stream.Stream;
 
-public abstract class AOCBase {
+abstract class AOCBase {
 
     private final String folder;
     private final String fileName;
@@ -57,7 +57,7 @@ public abstract class AOCBase {
     }
 
 
-    abstract void part1(Stream<String> fileInput) throws Exception;
-    abstract void part2(Stream<String> fileInput) throws Exception;
+    protected abstract void part1(Stream<String> fileInput) throws Exception;
+    protected abstract void part2(Stream<String> fileInput) throws Exception;
 
 }
