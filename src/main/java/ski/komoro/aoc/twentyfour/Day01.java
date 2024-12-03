@@ -20,7 +20,7 @@ final class Day01 extends AOCBase {
         final var col1 = new LinkedList<Integer>();
         final var col2 = new LinkedList<Integer>();
         fileInput.map(line -> line.split("   "))
-                .map(s -> new Tuple<>(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
+                .map(s -> Tuple.of(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
                 .iterator()
                 .forEachRemaining(t -> {
                     col1.push(t.left());
@@ -44,7 +44,7 @@ final class Day01 extends AOCBase {
         final var col1 = new LinkedList<Integer>();
         final var col2 = new LinkedList<Integer>();
         fileInput.map(line -> line.split("   "))
-                .map(s -> new Tuple<>(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
+                .map(s -> Tuple.of(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
                 .iterator()
                 .forEachRemaining(t -> {
                     col1.push(t.left());
