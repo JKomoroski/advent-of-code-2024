@@ -7,18 +7,18 @@ import java.util.List;
 import java.util.stream.Stream;
 import ski.komoro.aoc.utils.Utils;
 
-public class Day02 extends AOCBase {
+final class Day02 extends AOCBase {
 
     public static void main(final String[] args) throws Exception {
         new Day02().run();
     }
 
-    Day02() {
+    private Day02() {
         super("day-2", "in.txt");
     }
 
     @Override
-    void part1(final Stream<String> fileInput) throws Exception {
+    protected void part1(final Stream<String> fileInput) throws Exception {
         final var comp = differenceLessThan(4).thenComparing(differenceGreaterThan(0));
         final var count = fileInput.map(line -> line.split(" "))
                 .map(Day02::toIntList)
@@ -29,7 +29,7 @@ public class Day02 extends AOCBase {
     }
 
     @Override
-    void part2(final Stream<String> fileInput) throws Exception {
+    protected void part2(final Stream<String> fileInput) throws Exception {
         final var count = fileInput.map(line -> line.split(" "))
                 .map(Day02::toIntList)
                 .filter(Day02::isSortedWithRemove)

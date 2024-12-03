@@ -5,18 +5,18 @@ import java.util.LinkedList;
 import java.util.stream.Stream;
 import ski.komoro.aoc.utils.Tuple;
 
-public class Day01 extends AOCBase {
+final class Day01 extends AOCBase {
 
     public static void main(final String[] args) throws Exception {
         new Day01().run();
     }
 
-    Day01() {
+    private Day01() {
         super("day-1", "in.txt");
     }
 
     @Override
-    void part1(final Stream<String> fileInput) throws Exception {
+    protected void part1(final Stream<String> fileInput) throws Exception {
         final var col1 = new LinkedList<Integer>();
         final var col2 = new LinkedList<Integer>();
         fileInput.map(line -> line.split("   "))
@@ -40,7 +40,7 @@ public class Day01 extends AOCBase {
     }
 
     @Override
-    void part2(final Stream<String> fileInput) throws Exception {
+    protected void part2(final Stream<String> fileInput) throws Exception {
         final var col1 = new LinkedList<Integer>();
         final var col2 = new LinkedList<Integer>();
         fileInput.map(line -> line.split("   "))
