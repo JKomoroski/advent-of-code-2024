@@ -46,8 +46,6 @@ final class Day03 extends AOCBase {
 
     }
 
-
-
     static int processMul(MatchResult r) {
         return Integer.parseInt(r.group("firstOperand")) * Integer.parseInt(r.group("secondOperand"));
     }
