@@ -57,7 +57,7 @@ final class Day01 extends AOCBase {
         for (final var i1 : col1) {
             long matches = 0;
             for (final var i2 : col2) {
-                if  (i2 > i1) {
+                if (i2 > i1) {
                     break;
                 } else if (i2.equals(i1)) {
                     matches++;

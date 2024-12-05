@@ -2,7 +2,6 @@ package ski.komoro.aoc.twentyfour;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-
 import java.util.List;
 import java.util.stream.Stream;
 import ski.komoro.aoc.utils.Utils;
@@ -39,11 +38,11 @@ final class Day02 extends AOCBase {
     }
 
     private static List<Integer> toIntList(String[] l) {
-            var r = new ArrayList<Integer>();
-            for (final var s : l) {
-                r.add(Integer.parseInt(s));
-            }
-            return r;
+        var r = new ArrayList<Integer>();
+        for (final var s : l) {
+            r.add(Integer.parseInt(s));
+        }
+        return r;
     }
 
 
@@ -58,8 +57,8 @@ final class Day02 extends AOCBase {
     // Brute force it
     static <T> boolean isSortedWithRemove(List<Integer> r) {
         final Comparator<Integer> comp = differenceLessThan(4).thenComparing(differenceGreaterThan(0));
-        if(Utils.isSorted(r, Comparator.naturalOrder()) || Utils.isSorted(r, Comparator.reverseOrder())) {
-            if(Utils.isSorted(r, comp)) {
+        if (Utils.isSorted(r, Comparator.naturalOrder()) || Utils.isSorted(r, Comparator.reverseOrder())) {
+            if (Utils.isSorted(r, comp)) {
                 return true;
             }
         }
@@ -67,8 +66,8 @@ final class Day02 extends AOCBase {
         for (var i = 0; i < r.size(); i++) {
             final var copy = new ArrayList<Integer>(r);
             copy.remove(i);
-            if(Utils.isSorted(copy, Comparator.naturalOrder()) || Utils.isSorted(copy, Comparator.reverseOrder())) {
-                if(Utils.isSorted(copy, comp)) {
+            if (Utils.isSorted(copy, Comparator.naturalOrder()) || Utils.isSorted(copy, Comparator.reverseOrder())) {
+                if (Utils.isSorted(copy, comp)) {
                     return true;
                 }
             }

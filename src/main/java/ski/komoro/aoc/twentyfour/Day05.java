@@ -32,7 +32,7 @@ public class Day05 extends AOCBase {
                 final var k = Integer.parseInt(split[0]);
                 final var r = Integer.parseInt(split[1]);
                 final var v = rules.get(k);
-                if(v == null) {
+                if (v == null) {
                     final var s = new HashSet<Integer>();
                     s.add(r);
                     rules.put(k, s);
@@ -53,7 +53,9 @@ public class Day05 extends AOCBase {
                     for (var i = 0; i < u.size(); i++) {
                         final var rule = u.get(i);
                         final var after = rules.get(rule);
-                        if(after == null) continue;
+                        if (after == null) {
+                            continue;
+                        }
                         for (var j = i; j >= 0; j--) {
                             if (after.contains(u.get(j))) {
                                 return false;
@@ -62,7 +64,7 @@ public class Day05 extends AOCBase {
                     }
                     return true;
                 })
-                .mapToLong(u -> u.get(u.size()/2))
+                .mapToLong(u -> u.get(u.size() / 2))
                 .sum();
 
         System.out.println("Part 1: " + sumOfCorrectMiddles);
@@ -78,7 +80,7 @@ public class Day05 extends AOCBase {
                 final var k = Integer.parseInt(split[0]);
                 final var r = Integer.parseInt(split[1]);
                 final var v = rules.get(k);
-                if(v == null) {
+                if (v == null) {
                     final var s = new HashSet<Integer>();
                     s.add(r);
                     rules.put(k, s);
@@ -100,7 +102,9 @@ public class Day05 extends AOCBase {
                     for (var i = 0; i < u.size(); i++) {
                         final var rule = u.get(i);
                         final var after = rules.get(rule);
-                        if(after == null) continue;
+                        if (after == null) {
+                            continue;
+                        }
                         for (var j = i; j >= 0; j--) {
                             if (after.contains(u.get(j))) {
                                 return true;
@@ -113,14 +117,16 @@ public class Day05 extends AOCBase {
                     u.sort(ruleComparator);
                     return u;
                 })
-                .mapToLong(u -> u.get(u.size()/2))
+                .mapToLong(u -> u.get(u.size() / 2))
                 .sum();
 
         System.out.println("Part 2: " + sumOfFixedMiddles);
     }
 
     class RuleComparator implements Comparator<Integer> {
+
         private final Map<Integer, Set<Integer>> rules;
+
         RuleComparator(final Map<Integer, Set<Integer>> rules) {
             this.rules = rules;
         }
@@ -128,8 +134,12 @@ public class Day05 extends AOCBase {
         @Override
         public int compare(final Integer o1, final Integer o2) {
             final var v = rules.get(o1);
-            if(v == null) return 0;
-            if(v.contains(o2)) return -1;
+            if (v == null) {
+                return 0;
+            }
+            if (v.contains(o2)) {
+                return -1;
+            }
             return 1;
         }
     }
