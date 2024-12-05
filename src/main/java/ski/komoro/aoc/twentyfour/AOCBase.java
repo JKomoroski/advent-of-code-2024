@@ -27,7 +27,7 @@ abstract class AOCBase {
 
 
     void run() throws Exception {
-        final var input = Paths.get("","inputs", folder, fileName).toAbsolutePath();
+        final var input = Paths.get("", "inputs", folder, fileName).toAbsolutePath();
         runPart1(input);
         runPart2(input);
         System.out.println("Total Time Elapsed: " + Duration.between(start1, end2).toMillis() + "ms");
@@ -58,6 +58,7 @@ abstract class AOCBase {
 
 
     protected abstract void part1(Stream<String> fileInput) throws Exception;
+
     protected abstract void part2(Stream<String> fileInput) throws Exception;
 
 }

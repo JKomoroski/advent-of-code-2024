@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Utils {
+
     private Utils() {
         throw new IllegalStateException("Utility class");
     }

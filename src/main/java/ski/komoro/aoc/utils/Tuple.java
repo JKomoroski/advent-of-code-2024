@@ -7,7 +7,7 @@ public record Tuple<T, U>(T first, U second) {
     }
 
     public static <T> Tuple<T, T> of(T[] arr) {
-        if(arr.length != 2) {
+        if (arr.length != 2) {
             throw new IllegalArgumentException("Unexpected array length: " + arr.length);
         }
         return of(arr[0], arr[1]);
