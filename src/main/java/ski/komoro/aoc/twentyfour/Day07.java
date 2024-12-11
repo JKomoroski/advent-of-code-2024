@@ -15,7 +15,7 @@ public class Day07 extends AOCBase {
     }
 
     private Day07() {
-        super("day-7", "in.txt");
+        super("day-07", "in.txt");
     }
 
     @Override
